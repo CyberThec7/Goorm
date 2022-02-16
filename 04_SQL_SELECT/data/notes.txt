@@ -1,0 +1,73 @@
+id 			-- ID
+c_name   	-- Name des Unternehmens
+ticker   	-- DOW Ticker-Symbol
+sector   	-- Industrie-Sektor
+industry 	-- Branche
+no_yrs 		-- Jahre, seitdem ununterbrochen Dividende gesteigert werden
+ranking 	-- Ranking in der Liste
+price 		-- Preis pro Aktie in $ per 12/2019
+yield		-- Dividendenrendite (Dividendenanteil *100) / Aktienkurs
+dividend 	-- Dividendenanteil pro Aktie (Ausschuettung)
+payouts 	-- wieviel mal wird pro Jahr gezahlt?
+annualized	-- jaehrlich
+
+
+/*
+CONCAT() / Verknuepfung "string" + "string" ...
+UPPER() --> alles in Großbuchstaben
+LOWER() --> alles in Kleinbuchstaben
+LENGTH() --> String-Laenge
+REPLACE() --> Ersetzen von Stringanteilen
+TRIM() --> Trimmen vor/nach String (Whitespace)
+LINK: https://dev.mysql.com/doc/refman/5.6/en/string-functions.html
+*/
+
+-- CONCAT() / Verknuepfung "string" + "string" ....
+/*
+SELECT
+ticker AS "SYM",
+c_name "Unternehmen",
+concat("Ops: ",sector," : ",industry) "Operation"
+FROM stocks.ccc
+#ggf. Restriktionen
+LIMIT 10;
+*/
+
+-- UPPER() --> alles in Großbuchstaben
+/*
+SELECT
+ticker AS "SYM",
+upper(c_name) "Unternehmen"
+FROM stocks.ccc
+#ggf. Restriktionen
+LIMIT 10;
+*/
+-- LOWER() --> alles in Kleinbuchstaben (zb. bei mail-Adressen)
+/*
+SELECT
+ticker AS "SYM",
+lower(c_name) "Unternehmen"
+FROM stocks.ccc
+#ggf. Restriktionen
+LIMIT 10;
+*/
+
+-- LENGTH() / char_length()--> String-Laenge
+/*
+SELECT
+ticker SYM,
+c_name Unternehmen,
+concat("Ops: ",sector," : ",industry) Operation,
+#length(concat("Ops: ",sector,":",industry)) StrLen -- in Byte
+char_length(concat("Ops: ",sector,":",industry)) StrLen -- in Chars
+FROM stocks.ccc
+ORDER BY StrLen DESC
+LIMIT 20;
+*/
+/* QUERIES - count()*/
+
+/* Links:
+https://dev.mysql.com/doc/refman/5.6/en/counting-rows.html
+https://dev.mysql.com/doc/refman/5.6/en/group-by-handling.html
+https://dev.mysql.com/doc/refman/5.6/en/aggregate-functions.html#function_count-distinct
+*/

@@ -1,3 +1,1 @@
- source f_Goorm/f_goorm.sql
- source f_Goorm/f_goorm.sql
- 
+source f_Goorm/f_goorm.sql

@@ -16,19 +16,24 @@ CREATE DATABASE IF NOT EXISTS Goorm;
 USE Goorm;
 
 /* Tabelle anlegen, falls noch nicht vorhanden */
-CREATE TABLE IF NOT EXISTS test
+# CREATE TABLE IF NOT EXISTS test
+# (
+# 	name VARCHAR(20),
+# 	age INT
+# );
+/* Tabelle anlegen, falls noch nicht vorhanden */
+CREATE TABLE IF NOT EXISTS Goorm.test
 (
-	name VARCHAR(20),
-	age INT
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",# UNIQUE heißt no repeat 
+	age INT NOT NULL DEFAULT 0
 );
-/* Alle Tabellen in der DB anzeigen */
-SHOW TABLES;
 /* Struktur der Tabelle anzeigen */
 DESCRIBE test;
 /* ----- Daten ------- */
-INSERT INTO test(name,age) VALUES ("Wahhab",34);
+INSERT INTO test(name,age) VALUES ('Wahhab',34);
 INSERT INTO test(age,name) VALUES (21,"Alaa");
-INSERT INTO test VALUES ();
+
 /* ---- Inhalte der Tabelle anzeigen ---- */
 SELECT * FROM test;
 
@@ -38,4 +43,6 @@ INSERT INTO Goorm.test(name,age) VALUES ("Alonzo",35);
 INSERT INTO Goorm.test(name,age) VALUES ("Alonzo",31);
 INSERT INTO Goorm.test(name,age) VALUES ("Alonzo",25);
 INSERT INTO Goorm.test(name,age) VALUES ("Maxine",25);
+
+INSERT INTO Goorm.test VALUES ();
 SELECT * FROM test;
