@@ -1,0 +1,36 @@
+/*
+
+ DATEN BANK BASIS:
+ 1- to create database we write this command: create database xxx; LOOK *
+ 2- to create table in that database we write two command : a- use xxx; b- create table yyy (
+																								name varchar(20) not null default 'BBB',
+																								age int not null default 0,
+																								..............etc.
+																							); LOOK **
+3- to put value in the table write this command: insert into yyy(name,age,...etc) values('bla',43,...etc);
+4- to show all the value in the table: select * from yyy;
+5- to delete the data base write the command: drop data base xxx;
+6- id ntake primary key und not null and can also autoincrement.
+7- to laod(get) csv file write this command: load data lokal infile '' into table xxx fields terminated by ';/,' lines termenated by '\n' ignore 1 rows;
+8- to add somthing into the table we write this command: alter table xxx add .... z.B. user_adress int (5) not null defalult 00000;
+9- to update value in the table : update table set user_adress = 83497 where name/ ...etc. 'Nina' or where id = 5;
+10- SELECT name FROM tabll WHERE id != 4;
+11- delete from tabello where name ='Alonzo';
+12 set sql_safe_update = 0; mean when u write delete from yyy; then all thing well be deleted.
+13- insert into firstone (id,first_name)values (7,'Hmm'); -- to see null and 0
+14- select 10 +,-,*,/ 72;
+15- select *,verkaufPREIS - einkaufPREIS As 'Gewinn' from math; to get the value from gewinn 
+16- select  *, verkaufPREIS  As 'OWEN' from math; somthing from all rows
+17- select * from yyy order by xxx;
+18- select * from yyy order by xxx, ccc;
+19- select * from yyy limit 5;
+20- select * from firstone limit 5; 
+21- select land from firstone group by land;
+22- select land , min (age)from firstone group by land;
+23- select land , max (age)from firstone group by land;
+24- select land , avg (age)from firstone group by land;
+25- select land , sum (age)from firstone group by land;
+26- select 10 div 2; giv a int number all number after comma is deleted.
+
+ 
+*/
