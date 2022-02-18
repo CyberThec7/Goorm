@@ -35,7 +35,7 @@ INSERT INTO test(name,age) VALUES ('Wahhab',34);
 INSERT INTO test(age,name) VALUES (21,"Alaa");
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
-SELECT * FROM test;
+# SELECT * FROM test;
 
 /* ----- Daten ------- */
 INSERT INTO Goorm.test(name,age) VALUES ("Grizabella",29);
@@ -44,5 +44,10 @@ INSERT INTO Goorm.test(name,age) VALUES ("Alonzo",31);
 INSERT INTO Goorm.test(name,age) VALUES ("Alonzo",25);
 INSERT INTO Goorm.test(name,age) VALUES ("Maxine",25);
 
-INSERT INTO Goorm.test VALUES ();
+# INSERT INTO Goorm.test VALUES ();
 SELECT * FROM test;
+SELECT
+	name AS "SYM"
+FROM test;
+
+UPDATE test SET name = "grey" WHERE id = 3; 
